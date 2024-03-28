@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include <math.h>
 
 /**
  * binary_tree_height -  measures the height of a binary tree.
@@ -57,7 +56,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	height = binary_tree_height(tree);
 	size = binary_tree_size(tree);
-	full_size = pow(2, height + 1) - 1;
+	full_size = (2 << height) - 1;
 
 	return (size == full_size);
 }
